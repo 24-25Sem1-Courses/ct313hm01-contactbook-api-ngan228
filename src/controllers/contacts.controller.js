@@ -2,9 +2,7 @@ const JSend = require('../jsend');
 const contactsService = require('../services/contacts.service');
 const ApiError = require('../api-error');
 
-// function createContact(req, res) {
-//     return res.status(201).json(JSend.success({ contact: {} }));
-// }
+
 async function createContact(req, res, next) {
     if(!req.body?.name || typeof req.body.name !== 'string') {
         return next(new ApiError(400, 'Name should be a non-empty string'));
@@ -34,22 +32,7 @@ async function createContact(req, res, next) {
 }
 
 
-// function getContactsByFilter(req, res) {
-//     const filters = [];
-//     const { favorite, name } = req.query;
-//     if (favorite !== undefined) {
-//         filters.push(`favorite=${favorite}`);
-//     }
-//     if (name) {
-//         filters.push(`name=${name}`);
-//     }
-//     console.log(filters.join('&'));
-//     return res.json(
-//         JSend.success({
-//             contacts: [],
-//         })
-//     );
-// }
+
 
 async function getContactsByFilter(req, res, next) {
     let result = {
