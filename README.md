@@ -11,4 +11,3 @@ Semester 1, Academic year: 2024-2025.
 **Student Name**: Nguyen Thi Kim Ngan
 
 **Class Number**: M01
-
